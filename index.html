@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Knock Out Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Patrick+Hand&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="left-panel">
+        <h2>SURVIVOR</h2>
+
+        <div class="card-action-wrapper">
+            <div id="players" class="card-column"></div>
+            <div id="action" class="action-card">
+                <div>NONE</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-panel">
+        <h1>Knock Out</h1>
+
+        <div class="status" id="status">
+            Prize Pot: 0 | Current Chain: 0
+        </div>
+        <div class="prize-bar-wrapper">
+            <div class="prize-bar-label" id="prizeBarLabel">0</div>
+            <div class="prize-bar-track" id="prizeBarTrack">
+                <div class="prize-bar-fill" id="prizeBarFill"></div>
+            </div>
+            <div class="checkpoints" id="checkpoints">
+                <span class="checkpoint" data-threshold="100">100</span>
+                <span class="checkpoint" data-threshold="150">150</span>
+                <span class="checkpoint" data-threshold="200">200</span>
+                <span class="checkpoint" data-threshold="350">350</span>
+                <span class="checkpoint" data-threshold="400">400</span>
+                <span class="checkpoint" data-threshold="450">450</span>
+                <span class="checkpoint" data-threshold="600">600</span>
+            </div>
+        </div>
+        <div class="reward-bar">
+            <span class="reward-step" data-value="0">0</span>
+            <span class="reward-step" data-value="10">10</span>
+            <span class="reward-step" data-value="20">20</span>
+            <span class="reward-step" data-value="35">35</span>
+            <span class="reward-step" data-value="70">70</span>
+            <span class="reward-step" data-value="100">100</span>
+        </div>
+
+        <div class="controls">
+            <button id="btnCorrect"><img src="./img/correct.png" alt="Correct"></button>
+            <button id="btnBank"><img src="./img/save.png" alt="Bank"></button>
+            <button id="btnIncorrect"><img src="./img/wrong.png" alt="Wrong"></button>
+        </div>
+
+        <div class="timer-section">
+            <div class="timer-display">
+                <span id="timerDisplay">02:00</span>
+            </div>
+            <div class="timer-buttons">
+                <button id="toggleBtn" title="Start/Pause">
+                    <img id="toggleIcon" src="./img/battle.png" alt="Start/Pause" class="icon-only" />
+                    Battle</button>
+                <button id="resetBtn" title="Reset">
+                    <img src="./img/reset.png" alt="Reset" class="icon-only" />
+                </button>
+            </div>
+        </div>
+        <div class="modal hidden">
+
+            <div class="headerModel">
+                <h2>Final Round</h2>
+                <h3 id="finalscore"></h3>
+            </div>
+            <div id="modalPlayer1" class="hidden player-card"></div>
+            <div class="player-divider">
+                <span class="line"></span>
+                <span><img id="toggleIcon" src="./img/battle_dark.png" class="icon-only" /></span>
+                <span class="line"></span>
+            </div>
+            <div id="modalPlayer2" class="hidden player-card"></div>
+
+        </div>
+        <div class="modalboard hidden">
+            <div class="headerModel">
+                <h2>Leaderboard</h2>
+                <h3 id="finalscore"></h3>
+            </div>
+            <div id="players-leaderboard" class="leaderboard-column"></div>
+        </div>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
