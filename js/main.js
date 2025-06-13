@@ -276,7 +276,7 @@ updateStatus();
 
 // ==== TIMER LOGIC ====
 let timerInterval;
-let timeLeft = 90;
+let timeLeft = 120;
 let isRunning = false;
 
 const timerDisplay = document.getElementById('timerDisplay');
@@ -347,7 +347,7 @@ function toggleTimer() {
 function resetTimer() {
     clearInterval(timerInterval);
     isRunning = false;
-    timeLeft = 90;
+    timeLeft = 120;
     toggleBtn.innerHTML = '<img id="toggleIcon" src="./img/battle.png" alt="Start/Pause" class="icon-only" /> Battle';
     animateTimerChange();
     showAction(`Reset`);
